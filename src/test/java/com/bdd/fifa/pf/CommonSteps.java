@@ -18,7 +18,7 @@ public class CommonSteps {
    }
    
    @Given("^The user opens a Browser and navigates to the Fifa 2020 app root URL$") 
-   public void goToFifa2020Site() throws MalformedURLException{
+   public void goToFifa2020Site() throws MalformedURLException, InterruptedException{
 		
 	   basePage.openBrowser();
 	   

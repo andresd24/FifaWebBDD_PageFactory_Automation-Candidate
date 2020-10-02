@@ -16,12 +16,15 @@ public class BasePage {
 	    
 	}
 		
-	public void openBrowser() throws MalformedURLException{
+	public void openBrowser() throws MalformedURLException, InterruptedException{
 
 //		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 //		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities	);	ç
 		driver = new FirefoxDriver();
-    	driver.get("http://localhost:4200/"); 
+    	//driver.get("http://localhost:4200/"); 
+    	driver.manage().window().fullscreen();
+    	driver.navigate().to("http://localhost:4200/");
+    	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     	setWebDriver(driver);
 	}
 	

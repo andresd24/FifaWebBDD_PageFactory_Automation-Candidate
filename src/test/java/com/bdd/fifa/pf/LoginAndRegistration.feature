@@ -6,7 +6,7 @@ Feature: Login and Registration
     Then Validate that the Welcome Page loads correctly
     And The user clicks on the top right menu Register button
     Given The user enters the required registration data "<name>", "<surname>", "<email>", "<password>", "<confirmation>" and clicks the Register button
-    # Then ... implement challenge 3
+  #  Then ... implement challenge 3
     And The user closes the browser session
 
     Examples: 
