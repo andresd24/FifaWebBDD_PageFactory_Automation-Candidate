@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import webpages.BasePage;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.And;
+
 import org.openqa.selenium.WebDriver;
 
 public class CommonSteps {
@@ -17,14 +18,21 @@ public class CommonSteps {
 	   basePage = new BasePage();
    }
    
-   @Given("^The user opens a Browser and navigates to the Fifa 2020 app root URL$") 
+   @Given("^The user opens a browser window$") 
+   public void openBrowserWindow() throws MalformedURLException, InterruptedException{
+		
+	   basePage.startBrowser();
+	   
+   }
+   
+   @Given("^The user navigates to the Fifa app root URL$") 
    public void goToFifa2020Site() throws MalformedURLException, InterruptedException{
 		
-	   basePage.openBrowser();
+	   basePage.navigaateToHomePage();
 	   
    }
 	
-   @And("^The user closes the browser session$") 
+   @And("^The user closes a browser window$") 
    public void closeBrowserSession() {   
 
 	   basePage.closeBrowser();
