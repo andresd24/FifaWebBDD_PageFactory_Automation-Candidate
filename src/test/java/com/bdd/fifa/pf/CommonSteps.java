@@ -2,13 +2,10 @@ package com.bdd.fifa.pf;
 
 
 import java.net.MalformedURLException;
-import java.util.concurrent.TimeUnit;
 
 import webpages.BasePage;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.And;
-
-import org.openqa.selenium.WebDriver;
 
 public class CommonSteps {
 
@@ -28,7 +25,7 @@ public class CommonSteps {
    @Given("^The user navigates to the Fifa app root URL$") 
    public void goToFifa2020Site() throws MalformedURLException, InterruptedException{
 		
-	   basePage.navigaateToHomePage();
+	   basePage.navigateToHomePage();
 	   
    }
 	

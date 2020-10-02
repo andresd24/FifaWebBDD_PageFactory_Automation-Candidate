@@ -29,6 +29,20 @@ Feature: Login and Registration
 	    | email           | password 		 | name  |
 	    | admin@admin.com | Admin123!    | Admin |
 	    
-Scenario:
+	    
+	Scenario: Validate the title of the Teams Subsection
+    Given The user navigates to the Fifa app root URL
+		Then Validate that the Welcome Page loads correctly
+    When The user clicks on Teams option of the Navigaion Bar
+     
+     
+	Scenario:  Validate button that Appears After Delay    
+    Given The user navigates to the Fifa app root URL
+		Then Validate that the Welcome Page loads correctly
+		When The user navigates to the Store page from the NavBar
+# implement challenge 2
+		When The user presses delayed button and waits 20 seconds the text to appear
+ 		
+   Scenario:
      Given The user closes a browser window
 	    

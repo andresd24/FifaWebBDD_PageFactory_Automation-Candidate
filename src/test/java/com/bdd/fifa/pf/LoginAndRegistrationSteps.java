@@ -1,31 +1,32 @@
 package com.bdd.fifa.pf;
 
 import java.util.List;
-import cucumber.annotation.en.When;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
+import cucumber.annotation.en.When;
 import cucumber.annotation.en.And;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 
-import org.openqa.selenium.WebDriver;
 
 import webpages.WelcomePage;
 import webpages.RegisterPage;
 import webpages.LoginPage;
-import webpages.BasePage;
+import webpages.StorePage;
 
 public class LoginAndRegistrationSteps { 
   
    WelcomePage welcomePage;
    RegisterPage registerPage;
    LoginPage loginPage;
+   StorePage storePage;
    
    public LoginAndRegistrationSteps() throws InterruptedException {
 	   welcomePage = new WelcomePage();
 	   registerPage = new RegisterPage();
 	   loginPage = new LoginPage();
+	   storePage = new StorePage();
    }
 
 	
@@ -80,11 +81,11 @@ public class LoginAndRegistrationSteps {
 	   assertEquals("Name for top right menu nav bar dropdown link doesn't match expected", expectedName, actualName);
    }   
    
- /*  
+   
    @When("^The user navigates to the Store page from the NavBar$")
    public void clickOnStoresNavbarLink() {
 	   
 	   storePage.clickOnStoresNavBarLink();
    }
-*/
+
 }
